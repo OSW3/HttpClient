@@ -1,23 +1,40 @@
 <?php
+/// ======================================================================== ///
+/// Test : Client Http                                                       ///
+/// ------------------------------------------------------------------------ ///
+/// Open terminal                                                            ///
+/// > php get.php                                                            ///
+/// ======================================================================== ///
 
-use OSW3\HttpClient\Client;
+print_r("--- ========================================================== ---\n");
+print_r("--- TEST : CLIENT HTTP                                         ---\n");
+print_r("--- Method : GET                                               ---\n");
+print_r("--- ========================================================== ---\n");
+print_r("\n\n");
+
+
+
+/// 1. Requirements
+/// ======================================================================== ///
 
 require "../vendor/autoload.php";
+use OSW3\HttpClient\Client;
 
 
-/// 1. HTTP Client Instance
-/// =================================
+
+/// 2. HTTP Client Instance
+/// ======================================================================== ///
 
 $client = new Client;
 $header = array();
 $stream = array();
-$url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
+$url = "https://jsonplaceholder.typicode.com/posts";
 // $url    = require "./url.php";
 
 
 
-/// 2. Change the Request Header
-/// =================================
+/// 3. Change the Request Header
+/// ======================================================================== ///
 
 /// Passing the Referer
 /// ---
@@ -76,8 +93,8 @@ $url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
 
 
 
-/// 3. Override the Stream settings
-/// =================================
+/// 4. Override the Stream settings
+/// ======================================================================== ///
 
 /// Passing the Referer
 // $stream['referer'] = "https://referer-from-stream-options.exemple.com";
@@ -116,7 +133,6 @@ $url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
 //     // 'type' => CURLPROXY_SOCKS5_HOSTNAME,
 // );
 
-
 // CURLOPT_HTTP_VERSION
 // CURLOPT_SSL_VERIFYPEER
 // \CURLOPT_FOLLOWLOCATION
@@ -124,12 +140,8 @@ $url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
 
 
 
-
-
-
-
-/// 4. Execute the query
-/// =================================
+/// 5. Execute the query
+/// ======================================================================== ///
 $response = $client->get($url, $header, $stream);
 
 
@@ -149,7 +161,7 @@ $response = $client->get($url, $header, $stream);
 
 // print_r("-- RESPONSE : HEADER --");
 // print_r("\n\n");
-// print_r($response->headerRaw());
+print_r($response->headerRaw());
 // print_r($response->headerLines());
 // print_r($response->header());
 // print_r("\n\n");
@@ -157,6 +169,6 @@ $response = $client->get($url, $header, $stream);
 // print_r($response->header('versione'));
 // print_r("\n\n");
 
-print_r("-- RESPONSE : CONTENT --");
-print_r($response->content());
-print_r("\n\n");
+// print_r("-- RESPONSE : CONTENT --");
+// print_r($response->content());
+// print_r("\n\n");

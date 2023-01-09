@@ -3,12 +3,12 @@
 /// Test : Client Http                                                       ///
 /// ------------------------------------------------------------------------ ///
 /// Open terminal                                                            ///
-/// > php post.php                                                           ///
+/// > php put.php                                                           ///
 /// ======================================================================== ///
 
 print_r("--- ========================================================== ---\n");
 print_r("--- TEST : CLIENT HTTP                                         ---\n");
-print_r("--- Method : POST                                              ---\n");
+print_r("--- Method : PUT                                               ---\n");
 print_r("--- ========================================================== ---\n");
 print_r("\n\n");
 
@@ -29,7 +29,7 @@ $client = new Client;
 $parameters = array();
 $header = array();
 $stream = array();
-$url = "https://jsonplaceholder.typicode.com/posts";
+$url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
 // $url    = require "./url.php";
 
 
@@ -54,23 +54,12 @@ $url = "https://jsonplaceholder.typicode.com/posts";
 /// 5. Set the Request parameters
 /// ======================================================================== ///
 
-$parameters['title'] = "Title - nesciunt quas odio";
-$parameters['body'] = "Body - repudiandae veniam quaerat sunt sed\nalias aut fugiat sit autem sed est\nvoluptatem omnis possimus esse voluptatibus quis\nest aut tenetur dolor neque";
-$parameters['userId'] = 42;
+$parameters['param1'] = "value 1";
+$parameters['param2'] = "value 2";
+
 
 
 /// 6. Execute the query
 /// ======================================================================== ///
 
-$response = $client->post($url, $parameters, $header, $stream);
-
-print_r("-- RESPONSE : HEADER --");
-print_r("\n\n");
-print_r($response->headerRaw());
-print_r($response->header());
-print_r("\n\n");
-
-print_r("-- RESPONSE : CONTENT --");
-print_r("\n\n");
-print_r($response->content());
-print_r("\n\n");
+$response = $client->put($url, $parameters, $header, $stream);

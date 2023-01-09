@@ -103,12 +103,12 @@ class Response
     {
         $arr = array();
 
-        $re = "/^(HTTP\/\d+\.\d+)\s(\d{3})\s(.+).*/i";
+        $re = "/^(HTTP\/\d+(?:\.\d+)?)\s(\d{3})\s(.+).*/i";
         preg_match($re, $header[0], $matches);
 
-        $arr['version'] = $matches[1];
-        $arr['status-code'] = $matches[2];
-        $arr['status-message'] = $matches[3];
+        $arr['version'] = isset($matches[1]) ? $matches[1] : null;
+        $arr['status-code'] = isset($matches[2]) ? $matches[2] : null;
+        $arr['status-message'] = isset($matches[3]) ? $matches[3] : null;
         unset($header[0]);
 
         foreach ($header as $line)
