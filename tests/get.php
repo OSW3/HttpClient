@@ -11,8 +11,8 @@ require "../vendor/autoload.php";
 $client = new Client;
 $header = array();
 $stream = array();
-// $url    = require "./url.php";
 $url = "https://en.wikipedia.org/wiki/Hypertext_Transfer_Protocol";
+// $url    = require "./url.php";
 
 
 
