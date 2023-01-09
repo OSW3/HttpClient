@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-use OSW3\Http\HttpClient;
+use OSW3\HttpClient\Client;
 
 require "../vendor/autoload.php";
 
@@ -8,7 +8,7 @@ require "../vendor/autoload.php";
 /// 1. HTTP Client Instance
 /// =================================
 
-$client = new HttpClient;
+$client = new Client;
 $header = array();
 $stream = array();
 // $url    = require "./url.php";

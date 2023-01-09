@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Http;
+namespace OSW3\HttpClient\Helper;
 
 final class HttpHelper
 {

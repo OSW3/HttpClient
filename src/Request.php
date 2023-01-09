@@ -1,17 +1,17 @@
 <?php 
-namespace OSW3\Http;
+namespace OSW3\HttpClient;
 
-use OSW3\Http\HttpStream;
+use OSW3\HttpClient\Stream;
+use OSW3\HttpClient\Helper\HttpHelper;
+use OSW3\HttpClient\Interfaces\StreamInterface;
 
-// * Prepare and check HTTP Header, and parameter
-
-class HttpRequest
+class Request
 {
     private string|null $uri = null;
     private int|null $method = null;
     private array $parameters = array();
     private array $header = array();
-    private HttpStream $stream;
+    private Stream $stream;
 
     public function __construct(string $uri, int $method, array $header = array(), array $parameters = array(), array $streamOptions = array())
     {
@@ -20,7 +20,7 @@ class HttpRequest
         $this->setHeader($header);
         $this->setParameters($parameters);
 
-        $this->stream = new HttpStream;
+        $this->stream = new Stream;
 
         // Override Stream Settings
         foreach ($streamOptions as $name => $value)

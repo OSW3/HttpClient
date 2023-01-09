@@ -1,11 +1,11 @@
 {
-    "name": "osw3/http-client",
+    "name": "osw3/http-client-php",
     "type": "library",
     "description": "Provides a simple HTTP-Client",
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "OSW3\\Http\\": "src/"
+            "OSW3\\HttpClient\\": "src/"
         }
     },
     "authors": [

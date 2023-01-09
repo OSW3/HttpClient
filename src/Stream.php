@@ -1,10 +1,10 @@
 <?php 
-namespace OSW3\Http;
+namespace OSW3\HttpClient;
 
-use OSW3\Http\HttpHelper;
-use OSW3\Http\StreamInterface;
+use OSW3\HttpClient\Helper\HttpHelper;
+use OSW3\HttpClient\Interfaces\StreamInterface;
 
-class HttpStream
+class Stream
 {
     private \CurlHandle|null $handler = null;
     private StreamInterface $stream;

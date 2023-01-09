@@ -1,5 +1,5 @@
 <?php 
-namespace OSW3\Http;
+namespace OSW3\HttpClient\Interfaces;
 
 final class StreamInterface
 {

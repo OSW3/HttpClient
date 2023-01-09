@@ -1,9 +1,11 @@
 <?php 
-namespace OSW3\Http;
+namespace OSW3\HttpClient;
 
-use OSW3\Http\StreamInterface;
+use OSW3\HttpClient\Exception;
+use OSW3\HttpClient\Interfaces\StreamInterface;
 
-class HttpResponse
+
+class Response
 {
     private StreamInterface $stream;
 
@@ -148,7 +150,7 @@ class HttpResponse
             return $process[$key];
         }
 
-        throw new HttpException("The key \"$key\" was not found in the Response Process List");
+        throw new Exception("The key \"$key\" was not found in the Response Process List");
     }
 
     public function error(): string
