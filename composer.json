@@ -1,0 +1,16 @@
+{
+    "name": "osw3/http",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "OSW3\\Http\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "OSW3",
+            "email": "contact@osw3.net"
+        }
+    ],
+    "require": {}
+}
