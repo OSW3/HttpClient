@@ -1,5 +1,5 @@
 {
-    "name": "osw3/http",
+    "name": "osw3/http-client",
     "license": "MIT",
     "autoload": {
         "psr-4": {
