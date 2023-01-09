@@ -64,7 +64,7 @@ class HttpStream
                     ['key'  => \CURLOPT_POST,           'value' => false],
                     ['key'  => \CURLOPT_CUSTOMREQUEST,  'value' => null],
                     ['key'  => \CURLOPT_RETURNTRANSFER, 'value' => true],
-                    ['key'  => \CURLOPT_HEADER,         'value' => false],
+                    ['key'  => \CURLOPT_HEADER,         'value' => true],
                     ['key'  => \CURLOPT_NOBODY,         'value' => false]];
                 break;
 
