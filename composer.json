@@ -1,5 +1,7 @@
 {
     "name": "osw3/http-client",
+    "type": "library",
+    "description": "Provides a simple HTTP-Client",
     "license": "MIT",
     "autoload": {
         "psr-4": {
@@ -12,5 +14,6 @@
             "email": "contact@osw3.net"
         }
     ],
-    "require": {}
+    "require": {},
+    "minimum-stability": "dev"
 }
