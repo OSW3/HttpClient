@@ -70,15 +70,15 @@ $response = $client->head($url, $header, $stream);
 
 // print_r("-- RESPONSE : HEADER --");
 // print_r("\n\n");
-print_r($response->headerRaw());
+// print_r($response->headerRaw());
 // print_r($response->headerLines());
-// print_r($response->header());
+print_r($response->header());
 print_r("\n\n");
-print_r($response->header('version'));
+// print_r($response->header('version'));
 // print_r($response->header('status-code'));
 // print_r($response->header('versione'));
 // print_r("\n\n");
 
-// print_r("-- RESPONSE : CONTENT --");
-// print_r($response->content());
+print_r("-- RESPONSE : CONTENT --");
+print_r($response->content());
 print_r("\n\n");

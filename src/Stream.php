@@ -162,7 +162,6 @@ class Stream
                     }
                 }
 
-            
                 if (is_string($value) && !empty(trim($value)))
                 {
                     $proxy = trim($value);
